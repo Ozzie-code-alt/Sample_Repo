@@ -58,9 +58,13 @@ function beginQuiz() {
     }
     userScore.innerHTML = score;
 
+
+
+
     if (currentQuestion < 2) {
       next();
     }
+
   };
 
   falseBtn.innerHTML = questions[currentQuestion].answers[1].option;
@@ -181,7 +185,6 @@ function prev() {
   };
   nextBtn.classList.remove("hide");
 }
-
 
 function submit() {
   prevBtn.classList.add("hide");
