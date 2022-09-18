@@ -70,30 +70,58 @@ text-align: center;
   transition: var(--transition);
 }
 .main{
+  position: relative;
   margin-top: 1rem;
   padding-top: 0%;
   max-width: 80%;
   background-color: beige;
   box-shadow: 0 0 5px 4px;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   border-radius: 15px;
   text-align: center;
   background: linear-gradient(to right, #33fff0, #35c5bb, #0c7b73);
   background-repeat: no-repeat;
   height: 70vh;
   width: 50vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 11rem;
-  
+  display: grid;
+  /* align-items: center; */
+  /* justify-content: center; */
+  margin-left: 11rem;  
+  overflow: hidden;
+}
+
+.main .main-title-con .title-m h1{
+  font-size: 3rem;
 }
 .main .slider{
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
+ width: 200%;
+  display: flex;
+
 }
+
+.main .slider .btn-Next {
+  position: absolute;
+  right: 15px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ margin-top: 10rem;
+  z-index: 1;
+}
+
+.main .slider .btn-Next button{
+  font-size: large;
+  font-weight: bold;
+  box-shadow: 0 6px 12px -2px rgba(#f27813, 0.15);
+  background: #ef9614;
+  border-radius: 50%;
+  padding: 10px;
+  color: beige;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+
 .main .slider .slides p{
   opacity: 1%;
   transition: var(--transition);
@@ -102,9 +130,30 @@ text-align: center;
   opacity: 100%;
   transition: var(--transition);
 }
-
-
-.main .slider .slides{
+.main .slider .set-con1{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  transition: var(--transition);
+}
+.main .slider .set-con2{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  width: 100%;
+  height: 100%;
+  background:linear-gradient(to right, #33fff0, #35c5bb, #0c7b73);
+  transition: var(--transition);
+}
+.main .slider .set-con1 .slides{
+  position: relative;
+  background: none;
+  border-radius: 15px;
+  margin: 1rem;  
+  transition: var(--transition);
+}
+.main .slider .set-con2 .slides{
   position: relative;
   background: none;
   border-radius: 15px;
@@ -142,7 +191,7 @@ text-align: center;
   height: 70vh;
   width: 40vw;
   display: flex;
-  margin-right: 11rem;
+  margin-right: 14rem;
   justify-content: center;
   
 }
@@ -169,4 +218,249 @@ text-align: center;
 
 .hide {
   display: none;
+}
+
+
+
+.ghost-con{
+  position: relative;
+  background: #20262a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+
+.ghost {
+  cursor: pointer;
+  position: relative;
+  width: 160px;
+  height: 180px;
+  background: #f2f2f2;
+  transform: translateY(-15px);
+  border-radius: 70px 70px 0 0;
+  animation: float 4s linear infinite;
+}
+
+@keyframes float {
+  50% {
+      transform: translateY(15px);
+  }
+}
+
+.ghost .face {
+  width: 120px;
+  position: absolute;
+  top: 60px;
+  left: calc(50% - 60px);
+}
+
+.ghost .eyes {
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 18px;
+}
+
+.ghost .eyes span {
+  width: 24px;
+  height: 12px;
+  background: #20262a;
+  border-radius: 8px 8px 26px 26px;
+  transition: .4s;
+}
+
+.ghost:hover .eyes span {
+  height: 24px;
+  border-radius: 50%;
+}
+
+.ghost .mouth {
+  display: flex;
+  justify-content: space-around;
+}
+
+.ghost .mouth span {
+  width: 40px;
+  height: 9px;
+  background: #20262a;
+  border-radius: 0 0 20px 20px;
+  transition: .4s;
+}
+
+.ghost:hover .mouth span {
+  height: 20px;
+}
+
+.ghost .hands {
+  width: 220px;
+  position: absolute;
+  left: -30px;
+  top: 90px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ghost .hands span {
+  width: 30px;
+  height: 30px;
+  background: #f2f2f2;
+  transform: translateY(-5px);
+  animation: shake 4s linear infinite;
+}
+
+@keyframes shake {
+  50% {
+      transform: translateY(5px);
+  }
+}
+
+.ghost .hands span:first-child {
+  border-radius: 12px 0 0 20px;
+}
+
+.ghost .hands span:last-child {
+  border-radius: 0 12px 20px 0;
+  animation-delay: 2s;
+}
+
+.ghost .feet {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  bottom: -20px;
+}
+
+.ghost .feet span {
+  flex: 1;
+  height: 22px;
+  background: #f2f2f2;
+  border-radius: 0 0 20px 20px;
+}
+
+.ghost .feet span:first-child {
+  border-radius: 0 0 12px 20px;
+}
+
+.ghost .feet span:last-child {
+  border-radius: 0 0 20px 12px;
+}
+
+
+.animation{
+  background: linear-gradient( #252325, #b4827f6f);
+  width: 100%;
+  height: 100%
+}
+.Box{
+  border-radius:inherit;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+overflow: hidden;
+}
+.Box li{
+position: absolute;
+display: block;
+list-style: none;
+width: 25px;
+height:25px;
+background: rgba(175, 12, 12, 0.716);
+animation: animate 20s linear infinite;
+bottom: -200px;
+}
+
+.Box li:nth-child(1){
+left:86%;
+width:80px;
+height:80px;
+animation-delay:0s;
+border-radius: 50%;
+
+}
+.Box li:nth-child(2){
+left:12%;
+width:30px;
+height:30px;
+animation-delay:1.5s;
+animation-duration: 10s;
+border-radius: 50%;
+}
+.Box li:nth-child(3){
+left:70%;
+width:100px;
+height:100px;
+animation-delay:5.5s;
+animation-duration: 10s;
+border-radius: 50%;
+}
+.Box li:nth-child(4){
+left:42%;
+width:150px;
+height:150px;
+animation-delay:0s;
+animation-duration: 15s;
+border-radius: 50%;
+}
+
+.Box li:nth-child(5){
+left:65%;
+width:200px;
+height:200px;
+animation-delay:0s;
+animation-duration: 10s;
+border-radius: 50%;
+}
+.Box li:nth-child(6){
+left:95%;
+width:110px;
+height:110px;
+animation-delay:3.5s;
+border-radius: 50%;
+}
+.Box li:nth-child(7){
+left:35%;
+width:110px;
+height:110px;
+animation-delay:3.5s;
+border-radius: 50%;
+}
+.Box li:nth-child(8){
+left:55%;
+width:10px;
+height:10px;
+animation-delay:3.5s;
+border-radius: 50%;
+}
+.Box li:nth-child(9){
+left:45%;
+width:310px;
+height:310px;
+animation-delay:1.5s;
+border-radius: 50%;
+}
+.Box li:nth-child(10){
+left:75%;
+width:210px;
+height:210px;
+animation-delay:1.5s;
+border-radius: 50%;
+}
+
+@keyframes animate{
+0%{
+  transform: translateY(0) rotate(0deg) ;
+  opacity: 1;
+}
+100%{
+  transform: translateY(-2000px) rotate(360deg) ;
+  opacity: 0;
+}
 }
