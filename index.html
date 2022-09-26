@@ -5,14 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Trial Code</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="styles.css"  />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="main.js" defer> AOS.init();</script>
   </head>
   <body>
 
+
+<div class="title-page-con">
+<div class="group-page">
+
+  <img src="bg.png" alt="">
+  <div data-aos="fade-zoom-in"
+  data-aos-easing="0.4 ease-in-back"
+  data-aos-delay="500"
+  data-aos-offset="0"class="member-con"> 
+    <div class="typing">
+      <p>Shye Custodio's Group :>  <span class=" typed-text"></span><span class="cursor">&nbsp;</span></p>
+      <script type="text/javascript" src="js/typingeffect.js"></script>
+  </div>
+</div>
+</div >
+
+</div>
+
+
+
+
+
 <div class="Container-grid">
     
-    <div class="container">
+    <div class="container" data-aos="flip-left"
+    data-aos-easing="ease-out-cubic"
+    data-aos-duration="2000">
       <div class="ghost-con">
         
           <ul class="Box"> 
@@ -53,7 +78,8 @@
   </div>
       <div class="score">
         <span id="user-score">0</span>
-        <span id="toal-score">/3</span>
+        <span id="total-score">/10</span>
+        
       </div>
 
       <div class="content" id="question-area">
@@ -74,7 +100,9 @@
     </div>
    
       <div class="sub-container">
-   <div class="main">
+   <div class="main"data-aos="fade-up"
+   data-aos-duration="1500">
+
     <div class="main-title-con">
       <div class="title-m">
         <h1>Not Flash Cards</h1>
@@ -86,47 +114,81 @@
           </div>
         <div class="set set-con1">
         <div class="slides">
-          <h1>What is the 3rd phase of design thinking </h1>
-          <p>Hover Show Answer</p>
+          <h1> What is the 3rd phase of design thinking?</h1>
+        
+          <div class="answer-con">
+          <p>Ideate</p>
+        </div>
         </div>
         <div class="slides">
-          <h1>What tag does not require a closing tag</h1>
-          <p>Hover Show Answer</p>
+          <h1> Javascript is used to define the content of web pages.</h1>
+        
+          <div class="answer-con">
+            <p>False</p>
+          </div>
         </div>
         <div class="slides">
-          <h1>What is the correct pair of html tags</h1>
-          <p>Hover Show Answer</p>
+          <h1> What tag does not require a closing tag?</h1>
+        
+          <div class="answer-con">
+            <p>br tags</p>
+          </div>
         </div>
         <div class="slides">
-          <h1>Which HTML tag is used to define an internal style sheet</h1>
-          <p>Hover Show Answer</p>
+          <h1>CSS stands for Cascading Style Sheet.</h1>
+        
+          <div class="answer-con">
+            <p>True</p>
+          </div>
         </div>
 
       </div>
-      <div class="set set-con2">
+      <div class="set set-con21">
         <div class="slides">
-          <h1>What is the 3rd phase of design thinking </h1>
-          <p>Hover Show Answer</p>
+          <h1>In JavaScript, it is a container in which you can store certain information. </h1>
+        
+          <div class="answer-con">
+            <p>variable</p>
+          </div>
         </div>
         <div class="slides">
-          <h1>What tag does not require a closing tag</h1>
-          <p>Hover Show Answer</p>
+          <h1>What are the phases of design thinking?</h1>
+        
+          <div class="answer-con">
+            <p>Emphathize, Define ,Ideate, prototype and Test</p>
+          </div>
         </div>
         <div class="slides">
-          <h1>What is the correct pair of html tags</h1>
-          <p>Hover Show Answer</p>
+          <h1>HTML stands for ________.</h1>
+        
+          <div class="answer-con">
+            <p>Hyper Text Markup Language</p>
+          </div>
         </div>
         <div class="slides">
-          <h1>Which HTML tag is used to define an internal style sheet</h1>
-          <p>Hover Show Answer</p>
+          <h1>Which HTML tag is used to define an internal style sheet?</h1>
+        
+          <div class="answer-con">
+            <p>style</p>
+          </div>
         </div>
       </div>
 
       </div>           
     </div>
 
-      <div class="main-2">
+      <div class="main-2"data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="1500">
         <div class="leaderboard-con">
+          <ul class="Box"> 
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+           
+   </ul>  
           <div class="L-title-con">
             <div class="title">
               <h1>LeaderBoards!</h1>
@@ -134,13 +196,14 @@
           </div>
           <div class="leaderboards">
              
+        
               <ul>
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>4</li>
-              <li>5</li>
-              <li>6</li>
+              <li>Rubeth Joy Padernal</li>
+              <li>Lennon Pajar</li>
+              <li>Ting Quijano</li>
+              <li>Sir payba</li>
+              <li>Sir Rod</li>
+              <li>maam apple</li>
               </ul>
 
           </div>
@@ -157,8 +220,9 @@
 
 
 
-
-
-
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   </body>
 </html>
